@@ -2,6 +2,44 @@
 
 
 [[projects]]
+  digest = "1:b1aa87c86a10632d143a5893a7776b6b884542124e6d45a1b6b46acdf975c3c9"
+  name = "cloud.google.com/go"
+  packages = ["compute/metadata"]
+  pruneopts = "UT"
+  revision = "a3e97daf91e2ac1dd2f6b17bf2b919f4445be772"
+  version = "v0.89.0"
+
+[[projects]]
+  branch = "master"
+  digest = "1:b7cb6054d3dff43b38ad2e92492f220f57ae6087ee797dca298139776749ace8"
+  name = "github.com/golang/groupcache"
+  packages = ["lru"]
+  pruneopts = "UT"
+  revision = "41bb18bfe9da5321badc438f91158cd790a33aa3"
+
+[[projects]]
+  digest = "1:6ad0084de8fefa2b9bca7e6e627bb9868a0dedccc1274a6730a813b7853ac41c"
+  name = "github.com/golang/protobuf"
+  packages = [
+    "proto",
+    "ptypes",
+    "ptypes/any",
+    "ptypes/duration",
+    "ptypes/timestamp",
+  ]
+  pruneopts = "UT"
+  revision = "ae97035608a719c7a1c1c41bed0ae0744bdb0c6f"
+  version = "v1.5.2"
+
+[[projects]]
+  digest = "1:766102087520f9d54f2acc72bd6637045900ac735b4a419b128d216f0c5c4876"
+  name = "github.com/googleapis/gax-go"
+  packages = ["v2"]
+  pruneopts = "UT"
+  revision = "bd5b16380fd03dc758d11cef74ba2e3bc8b0e8c2"
+  version = "v2.0.5"
+
+[[projects]]
   digest = "1:e377cb0e163dcc88ea2b87a8e3f62abc3229ddbd6e20ece13f5f80b673e5614f"
   name = "github.com/klauspost/compress"
   packages = [
@@ -49,6 +87,14 @@
   version = "v0.0.13"
 
 [[projects]]
+  digest = "1:819b22a75ddd43c69965c9582dcab34a077f2d3f543bf8832126b275ea6953e6"
+  name = "github.com/sirupsen/logrus"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "bdc0db8ead3853c56b7cd1ac2ba4e11b47d7da6b"
+  version = "v1.8.1"
+
+[[projects]]
   digest = "1:c468422f334a6b46a19448ad59aaffdfc0a36b08fdcc1c749a0b29b6453d7e59"
   name = "github.com/valyala/bytebufferpool"
   packages = ["."]
@@ -77,6 +123,31 @@
   version = "v1.2.1"
 
 [[projects]]
+  digest = "1:1fc3d9a4e4373883b7af4a3856c024911d2880952e6890910e1ef5077fa2433d"
+  name = "go.opencensus.io"
+  packages = [
+    ".",
+    "internal",
+    "internal/tagencoding",
+    "metric/metricdata",
+    "metric/metricproducer",
+    "plugin/ochttp",
+    "plugin/ochttp/propagation/b3",
+    "resource",
+    "stats",
+    "stats/internal",
+    "stats/view",
+    "tag",
+    "trace",
+    "trace/internal",
+    "trace/propagation",
+    "trace/tracestate",
+  ]
+  pruneopts = "UT"
+  revision = "49838f207d61097fc0ebb8aeef306913388376ca"
+  version = "v0.23.0"
+
+[[projects]]
   branch = "master"
   digest = "1:699d068af7aaa15f3e0282632500301396f9a4b8181b12a1643aa49c0d78a7bc"
   name = "golang.org/x/crypto"
@@ -89,25 +160,46 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:c4eb20c32750feeec9fcef81cc943a86111f71545187ce2b4e3630a6bf4df9d0"
+  digest = "1:c6c6e8f06ee9977d50928de654e5fe24f05ec76453e59baaf428002c40375fa3"
   name = "golang.org/x/net"
   packages = [
+    "context",
+    "context/ctxhttp",
     "http/httpguts",
     "http2",
     "http2/h2c",
     "http2/hpack",
     "idna",
+    "internal/timeseries",
+    "trace",
   ]
   pruneopts = "UT"
   revision = "c6fcb2dbf98596caad8f56c0c398c1c6ff1fcff9"
 
 [[projects]]
   branch = "master"
-  digest = "1:b3f1f29803b6cdf4882610bb4c74df41900e9c8b4b37b7d0231e25539275001c"
+  digest = "1:d24da241eb6bd6b06aec048f865413b45e5b2e006877c33995809eff693b0809"
+  name = "golang.org/x/oauth2"
+  packages = [
+    ".",
+    "authhandler",
+    "google",
+    "google/internal/externalaccount",
+    "internal",
+    "jws",
+    "jwt",
+  ]
+  pruneopts = "UT"
+  revision = "a41e5a7819143202e8d21fb9ac9c659fbd501fb3"
+
+[[projects]]
+  branch = "master"
+  digest = "1:375189898aba317b5bb4661d2048ddcfa606abcf34b9153b4bf1f455cfdd934c"
   name = "golang.org/x/sys"
   packages = [
     "internal/unsafeheader",
     "unix",
+    "windows",
   ]
   pruneopts = "UT"
   revision = "0f9fa26af87c481a6877a4ca1330699ba9a30673"
@@ -137,12 +229,155 @@
   revision = "e328d63cff14134669501e0e154e4f141c784322"
   version = "v0.3.6"
 
+[[projects]]
+  digest = "1:eb41f07f23d9cf2a870faf84bf8751d751c9608ba35bb29e797d3be40ff70486"
+  name = "google.golang.org/api"
+  packages = [
+    "googleapi",
+    "googleapi/transport",
+    "internal",
+    "internal/gensupport",
+    "internal/impersonate",
+    "internal/third_party/uritemplates",
+    "option",
+    "option/internaloption",
+    "transport/cert",
+    "transport/http",
+    "transport/http/internal/propagation",
+    "transport/internal/dca",
+    "youtube/v3",
+  ]
+  pruneopts = "UT"
+  revision = "3e2b6a25f224e301409d11443d464af92671d2f0"
+  version = "v0.52.0"
+
+[[projects]]
+  digest = "1:14c413c64fab6d835c4e31671369f68ac7f38d2087c968eb2e55d8105b6b420d"
+  name = "google.golang.org/appengine"
+  packages = [
+    ".",
+    "internal",
+    "internal/app_identity",
+    "internal/base",
+    "internal/datastore",
+    "internal/log",
+    "internal/modules",
+    "internal/remote_api",
+    "internal/urlfetch",
+    "urlfetch",
+  ]
+  pruneopts = "UT"
+  revision = "5d1c1d03f8703c2e81478d9a30e9afa2d3e4bd8a"
+  version = "v1.6.7"
+
+[[projects]]
+  branch = "master"
+  digest = "1:04a35a4332efa2d2c6a42bc07199345267ce02e0ecde01e4bf601c925efa3e9a"
+  name = "google.golang.org/genproto"
+  packages = ["googleapis/rpc/status"]
+  pruneopts = "UT"
+  revision = "df9385d47c1bd605461ea1ebed768c659f962e09"
+
+[[projects]]
+  digest = "1:dcdd4f98ce38eb1995c4a60ab10b460d805e40d3cefe69f562575e6dc2b7019a"
+  name = "google.golang.org/grpc"
+  packages = [
+    ".",
+    "attributes",
+    "backoff",
+    "balancer",
+    "balancer/base",
+    "balancer/grpclb/state",
+    "balancer/roundrobin",
+    "binarylog/grpc_binarylog_v1",
+    "codes",
+    "connectivity",
+    "credentials",
+    "encoding",
+    "encoding/proto",
+    "grpclog",
+    "internal",
+    "internal/backoff",
+    "internal/balancerload",
+    "internal/binarylog",
+    "internal/buffer",
+    "internal/channelz",
+    "internal/credentials",
+    "internal/envconfig",
+    "internal/grpclog",
+    "internal/grpcrand",
+    "internal/grpcsync",
+    "internal/grpcutil",
+    "internal/metadata",
+    "internal/resolver",
+    "internal/resolver/dns",
+    "internal/resolver/passthrough",
+    "internal/resolver/unix",
+    "internal/serviceconfig",
+    "internal/status",
+    "internal/syscall",
+    "internal/transport",
+    "internal/transport/networktype",
+    "keepalive",
+    "metadata",
+    "peer",
+    "resolver",
+    "serviceconfig",
+    "stats",
+    "status",
+    "tap",
+  ]
+  pruneopts = "UT"
+  revision = "ebf6a4b476dc7c1bcb57c82e9c74529a7f046710"
+  version = "v1.39.0"
+
+[[projects]]
+  digest = "1:239666bf287c28c42503ff9b644a2e6b2b8ad5fedacc8f32ce88571cfdc2fbce"
+  name = "google.golang.org/protobuf"
+  packages = [
+    "encoding/prototext",
+    "encoding/protowire",
+    "internal/descfmt",
+    "internal/descopts",
+    "internal/detrand",
+    "internal/encoding/defval",
+    "internal/encoding/messageset",
+    "internal/encoding/tag",
+    "internal/encoding/text",
+    "internal/errors",
+    "internal/filedesc",
+    "internal/filetype",
+    "internal/flags",
+    "internal/genid",
+    "internal/impl",
+    "internal/order",
+    "internal/pragma",
+    "internal/set",
+    "internal/strs",
+    "internal/version",
+    "proto",
+    "reflect/protodesc",
+    "reflect/protoreflect",
+    "reflect/protoregistry",
+    "runtime/protoiface",
+    "runtime/protoimpl",
+    "types/descriptorpb",
+    "types/known/anypb",
+    "types/known/durationpb",
+    "types/known/timestamppb",
+  ]
+  pruneopts = "UT"
+  revision = "b92717ecb630d4a4824b372bf98c729d87311a4d"
+  version = "v1.27.1"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
     "github.com/labstack/echo",
+    "github.com/sirupsen/logrus",
     "github.com/valyala/fasthttp",
+    "google.golang.org/api/youtube/v3",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

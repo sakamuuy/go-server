@@ -4,12 +4,21 @@ import (
 	"youtube-manager-go/web/routes"
 
 	"github.com/labstack/echo"
+	"github.com/sirupsen/logrus"
 )
 
+func init() {
+	logrus.SetLevel(logrus.DebugLevel)
+	logrus.SetFormatter((&logrus.JSONFormatter{}))
+}
+
 func main() {
-	e := echo.New()
+	app := echo.New()
 
-	routes.Init(e)
+	// logger := middleware.LoggerWithConfig(middleware.LoggerConfig{})
+	// app.Use(logger)
 
-	e.Logger.Fatal(e.Start(":8080"))
+	routes.Init(app)
+
+	app.Logger.Fatal(app.Start(":8080"))
 }
