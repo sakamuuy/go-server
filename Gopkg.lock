@@ -2,6 +2,18 @@
 
 
 [[projects]]
+  digest = "1:e377cb0e163dcc88ea2b87a8e3f62abc3229ddbd6e20ece13f5f80b673e5614f"
+  name = "github.com/klauspost/compress"
+  packages = [
+    "flate",
+    "gzip",
+    "zlib",
+  ]
+  pruneopts = "UT"
+  revision = "5453ad3645a8c3a61091d6508d3d0e32ad950b79"
+  version = "v1.13.1"
+
+[[projects]]
   digest = "1:d351608f30adee8102a8130d159b068702202ea89588e68c7011baaa8437c3ef"
   name = "github.com/labstack/echo"
   packages = ["."]
@@ -43,6 +55,18 @@
   pruneopts = "UT"
   revision = "e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7"
   version = "v1.0.0"
+
+[[projects]]
+  digest = "1:15ad8a80098fcc7a194b9db6b26d74072a852e4faa957848c8118193d3c69230"
+  name = "github.com/valyala/fasthttp"
+  packages = [
+    ".",
+    "fasthttputil",
+    "stackless",
+  ]
+  pruneopts = "UT"
+  revision = "e5f51c11919d4f66400334047b897ef0a94c6f3c"
+  version = "v20180529"
 
 [[projects]]
   digest = "1:d724474523928294ece8cc97e8d2371f27c7e6d3068bfa9ace93bd3105b4fdbd"
@@ -116,6 +140,9 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = ["github.com/labstack/echo"]
+  input-imports = [
+    "github.com/labstack/echo",
+    "github.com/valyala/fasthttp",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
